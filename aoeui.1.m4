@@ -927,5 +927,5 @@ Helpful commands to use with
 .BR tr (1),
 .BR uniq (1)
 .SH AUTHOR
-Peter Klausler <pmk@google.com> wrote
+Peter Klausler <pmklausler@gmail.com> wrote
 .BR AOEUI .

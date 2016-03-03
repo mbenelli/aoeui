@@ -75,4 +75,4 @@ Parting words:
 - Many commands support a repeat count; ^Sp9^cmd(T,H) advances nine characters.
 - AOEUI has bookmarks, registers, tags, folding, and other features.
   Read the manual page for the full story and lots of useful tips.
-- Send me a note at pmk@google.com and say hi!
+- Send me a note at pmklausler@gmail.com and say hi!
