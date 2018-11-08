@@ -85,6 +85,8 @@ int main(int argc, char *const *argv)
 	if (!make_writable)
 		make_writable = getenv("AOEUI_WRITABLE");
 
+	no_keywords = TRUE;
+
 	while ((ch = getopt(argc, argv, "dkoqrsSt:uUw:")) >= 0)
 		switch (ch) {
 		case 'd':

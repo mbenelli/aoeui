@@ -511,7 +511,7 @@ static int paintch(struct window *window, Unicode_t ch, int row, int column,
 		for (; *brack; brack += 2)
 			if (ch == brack[0] && (*brackets)++ & 1 ||
 			    ch == brack[1] && --*brackets & 1) {
-				fgrgba = BLUE_RGBA;
+//				fgrgba = BLUE_RGBA;
 				break;
 			}
 
