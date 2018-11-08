@@ -293,7 +293,7 @@ struct view *text_new(void)
 		sprintf(dir, "/tmp/aoeui-%s", me);
 		fd = try_dir(path, dir, gmt);
 	}
-#if !defined __APPLE__ && !defined BSD
+#if !defined __APPLE__ && !defined BSD && !defined __FreeBSD__
 	if (fd < 0 && (me = cuserid(NULL))) {
 		sprintf(dir, "/tmp/aoeui-%s", me);
 		fd = try_dir(path, dir, gmt);
