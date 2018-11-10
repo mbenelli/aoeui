@@ -1,5 +1,22 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "types.h"
+#include "mem.h"
+#include "text.h"
+#include "buffer.h"
+#include "util.h"
+#include "die.h"
+#include "child.h"
+
+#include <unistd.h> // getcwd
+#include <errno.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 enum utf8_mode utf8_mode = UTF8_AUTO;
 const char *make_writable;
@@ -294,7 +311,7 @@ struct view *text_new(void)
 		fd = try_dir(path, dir, gmt);
 	}
 #if !defined __APPLE__ && !defined BSD && !defined __FreeBSD__
-	if (fd < 0 && (me = cuserid(NULL))) {
+	if (fd < 0 && (me = getlogin())) {
 		sprintf(dir, "/tmp/aoeui-%s", me);
 		fd = try_dir(path, dir, gmt);
 	}
@@ -508,3 +525,4 @@ void texts_uncreate(void)
 		if (text->flags & TEXT_CREATED)
 			unlink(text->path);
 }
+

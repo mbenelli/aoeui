@@ -1,5 +1,18 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "types.h"
+#include "text.h"
+#include "locus.h"
+#include "util.h"
+#include "mem.h"
+#include "window.h"
+#include "mode.h"
+#include "die.h"
+
+#include <errno.h>
+
+#include <stdlib.h>
+#include <string.h>
 
 /* TAGS file searching */
 

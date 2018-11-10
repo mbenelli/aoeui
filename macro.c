@@ -1,5 +1,9 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "macro.h"
+
+#include "buffer.h"
+#include "mem.h"
 
 struct macro {
 	position_t start, at;

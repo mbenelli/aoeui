@@ -1,5 +1,15 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "types.h"
+#include "mem.h"
+#include "text.h"
+#include "utf8.h"
+#include "util.h"
+
+#include <dirent.h>
+
+#include <stdlib.h>
+#include <string.h>
 
 static char *path_complete(const char *string)
 {

@@ -1,5 +1,9 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "types.h"
+#include "locus.h"
+#include "mem.h"
+#include "text.h"
 
 static struct bookmark {
 	unsigned id;

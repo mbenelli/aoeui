@@ -1,5 +1,12 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "types.h"
+#include "text.h"
+#include "utf8.h"
+#include "util.h"
+#include "window.h"
+
+#include <string.h>
 
 /* Routines that scan characters in views */
 

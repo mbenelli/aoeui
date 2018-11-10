@@ -2,6 +2,9 @@
 #ifndef MACRO_H
 #define MACRO_H
 
+#include "types.h"
+#include "utf8.h"
+
 struct macro *macro_record(void);
 Boolean_t macro_end_recording(Unicode_t chop);
 Boolean_t macro_play(struct macro *, int repeat);
