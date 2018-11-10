@@ -1,5 +1,14 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "text.h"
+
+#include "mem.h"
+#include "mode.h"
+#include "window.h" // window_destroy
+
+#include <sys/mman.h> // munmap
+
+#include <string.h>
 
 /*
  *	A text is a container for the content of a file or
@@ -98,7 +107,7 @@ struct view *text_create(const char *path, unsigned flags)
 	if (default_no_tabs)
 		text->flags |= TEXT_NO_TABS;
 	text->tabstop = default_tab_stop;
-	keyword_init(text);
+	//keyword_init(text);
 
 	for (prev = NULL, bp = text_list; bp; prev = bp, bp = bp->next)
 		;
@@ -276,3 +285,4 @@ size_t view_insert(struct view *view, const void *in,
 		bytes = in ? strlen(in) : 0;
 	return text_insert(view->text, in, view->start + offset, bytes);
 }
+

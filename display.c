@@ -1,5 +1,22 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "display.h"
+
+#include "utf8.h"
+#include "die.h"
+#include "mem.h"
+#include "child.h" // multiplexor
+
+#include <signal.h>
+#include <errno.h>
+
+#include <pty.h> // linux
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h> // memcpy
+#include <stdarg.h>
+#include <ctype.h>
 
 /*
  *	Bandwidth-optimized terminal display management.

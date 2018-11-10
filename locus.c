@@ -1,5 +1,9 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "locus.h"
+
+#include "mem.h" // reallocate
+#include "text.h" // struct view
 
 /*
  *	A locus is a position in a text.  Insertions and

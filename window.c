@@ -1,5 +1,18 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "window.h"
+
+#include "types.h"
+#include "mode.h"
+#include "rgba.h" // rgba_t
+#include "locus.h" // locus_t
+#include "display.h" // display_title
+#include "util.h" // current_line_number
+#include "mem.h" // allocate0
+
+#include <stdio.h>
+#include <string.h> // strlen
+#include <stdlib.h> // size_t, getenv
 
 /*
  *	A "window" is a presentation of a view on part or all of

@@ -2,6 +2,18 @@
 #ifndef TEXT_H
 #define TEXT_H
 
+#include "inline.h" // INLINE
+#include "types.h"  // Boolean_t
+#include "locus.h"  // locus_t
+#include "buffer.h" // buffer_byte
+#include "utf8.h"   // UNICODE_BAD
+
+#include <sys/wait.h> // waitpid
+
+#include <stdio.h>  // fd_t, pid_t, ...
+#include <time.h>   // time_t
+
+
 /* Texts and views */
 
 struct text {

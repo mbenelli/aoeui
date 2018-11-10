@@ -2,6 +2,9 @@
 #ifndef MODE_H
 #define MODE_H
 
+#include "rgba.h"
+#include "types.h"
+
 struct view;
 typedef void (*command)(struct view *, Unicode_t);
 

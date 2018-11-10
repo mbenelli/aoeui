@@ -1,5 +1,9 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "text.h" // TEXT_RDONLY
+#include "mode.h" // is_asdfg
+
+#include <string.h> // strlen
 
 static const char *help[2] = {
 #include "aoeui.help"

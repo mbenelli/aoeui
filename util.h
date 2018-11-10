@@ -2,6 +2,14 @@
 #ifndef UTIL_H
 #define UTIL_H
 
+#include "inline.h"
+#include "types.h" // position_t
+#include "text.h" // struct text
+
+#include <ctype.h>
+
+#include <stdarg.h>
+
 /* Utilities */
 
 struct view;

@@ -1,5 +1,22 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "child.h"
+
+#include "die.h"
+#include "mem.h"
+#include "display.h" // original_termios
+#include "window.h" // window_beep
+#include "util.h"  // view_...
+#include "clip.h" // clip_paste
+
+#include <sys/select.h> // select, fd_set ...
+#include <sys/termios.h>
+#include <pty.h> // linux
+
+#include <stdlib.h> // EXIT_FAILURE
+#include <string.h> // memset
+#include <errno.h>
+#include <time.h>
 
 /*
  *	Handle the ^E command, which runs the shell command pipeline

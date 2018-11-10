@@ -1,5 +1,20 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "text.h" // view_open, default_tab_stop, ...
+#include "window.h" // window_current_view
+#include "die.h" // die
+#include "display.h" // original_termios
+
+#include "mode.h" // is_asdfg
+#include "macro.h" // macro_getch
+
+#include <pty.h> // linux only
+
+#include <signal.h>
+#include <errno.h>
+
+#include <stdlib.h>
+#include <string.h>
 
 static void sighandler(int signo)
 {
@@ -86,6 +101,8 @@ int main(int argc, char *const *argv)
 		make_writable = getenv("AOEUI_WRITABLE");
 
 	no_keywords = TRUE;
+	utf8_mode = UTF8_AUTO;
+	default_tab_stop = 8;
 
 	while ((ch = getopt(argc, argv, "dkoqrsSt:uUw:")) >= 0)
 		switch (ch) {

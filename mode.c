@@ -1,6 +1,19 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
 
+#include "mode.h"
+
+#include "utf8.h" // FUNCTION_FKEYS
+#include "text.h" // struct view
+#include "util.h"
+#include "clip.h"
+#include "macro.h"
+#include "window.h"
+#include "child.h"
+#include "mem.h"
+#include "die.h" // status, status_hide
+
+#include <stdlib.h> // EXIT_SUCCESS
+#include <string.h> // memcpy
 /*
  *	This is the default command mode.
  */

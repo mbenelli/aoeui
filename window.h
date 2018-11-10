@@ -2,6 +2,9 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include "text.h" // struct view
+#include "types.h" // position_t
+
 /* Windows */
 
 struct window *window_raise(struct view *);

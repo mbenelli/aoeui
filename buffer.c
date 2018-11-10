@@ -1,5 +1,17 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "buffer.h"
+
+#include "mem.h"
+#include "die.h"
+
+#include <sys/stat.h> // open
+#include <fcntl.h>
+#include <sys/mman.h> // munmap
+#include <errno.h>
+
+#include <stdio.h> // sprintf
+#include <string.h> // strlen
 
 /*
  *	Buffers contain payload bytes and a "gap" of unused space.

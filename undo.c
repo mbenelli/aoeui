@@ -1,5 +1,10 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "types.h"
+#include "buffer.h"
+#include "text.h"
+#include "mem.h"
+#include "window.h"
 
 struct edit {
 	position_t offset;

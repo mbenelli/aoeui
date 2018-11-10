@@ -2,6 +2,7 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
+#include "types.h"
 #include "rgba.h"
 
 extern struct termios original_termios;

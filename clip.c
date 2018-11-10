@@ -1,5 +1,12 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "clip.h"
+
+#include "mem.h"
+#include "util.h"
+#include "buffer.h"
+
+#include <string.h> // memset
 
 static struct buffer **clip_buffer;
 static unsigned clip_buffers;

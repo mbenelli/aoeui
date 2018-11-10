@@ -2,6 +2,9 @@
 #ifndef BUFFER_H
 #define BUFFER_H
 
+#include "inline.h"
+#include "types.h"
+
 /* Gap buffers */
 
 struct buffer;

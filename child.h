@@ -2,6 +2,8 @@
 #ifndef CHILD_H
 #define CHILD_H
 
+#include "text.h" // struct view
+
 void mode_child(struct view *);
 void mode_shell_pipe(struct view *);
 void shell_command(struct view *, Unicode_t);

@@ -1,5 +1,20 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "die.h"
+
+#include "text.h" // text_create, ...
+#include "locus.h" // locus_set
+#include "window.h" // window_below
+#include "display.h" // original_termios
+#include "util.h" // view_vprintf
+
+#include <errno.h>
+#include <pty.h> // linux
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 
 /* Error messaging */
 

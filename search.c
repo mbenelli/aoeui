@@ -1,6 +1,20 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
 
+#include "types.h"
+#include "rgba.h"
+#include "mode.h"
+#include "utf8.h"
+#include "text.h"
+#include "mem.h"
+#include "clip.h"
+#include "window.h"
+#include "util.h"
+#include "die.h"
+#include "macro.h"
+
+#include <regex.h>
+
+#include <string.h>
 /*
  *	Incremental search mode
  */

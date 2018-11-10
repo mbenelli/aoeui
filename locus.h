@@ -2,6 +2,8 @@
 #ifndef LOCUS_H
 #define LOCUS_H
 
+#include "types.h"
+
 /* A locus is a fixed point in a view, an offset that get adjusted
  * when insertions and deletions occur before its position.
  */

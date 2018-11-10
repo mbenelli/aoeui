@@ -1,5 +1,12 @@
 /* Copyright 2007, 2008 Peter Klausler.  See COPYING for license. */
-#include "all.h"
+
+#include "util.h"
+
+#include "text.h" // struct view
+#include "mem.h" // allocate
+
+#include <unistd.h> // ssize_t
+
 
 ssize_t view_vprintf(struct view *view, const char *msg, va_list ap)
 {
